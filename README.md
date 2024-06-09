@@ -148,10 +148,16 @@ I would probably use the linear regression model over the decision tree model si
 
 ![alt text](https://i.imgur.com/kzTKtDN.png)
 
-So I created a heat map that displays the sales distribution for each region according to the genre of the game. This allows you to see which genre has sold the most in all the different regions. So according to this heat map for North America, Europe, and Other the best-selling genre is the Action genre. But for Japan the best-selling genre is Role-Playing. Another thing to notice is that the Strategy genre seems to be the genre with the least sales for all the regions. So if you were a publisher looking into making a video game and were located in North America the number one genre you should put your focus on is creating an action video game.
+This visualization shows the sales distribution for each region according to the genre of the game. 
+
+According to this heat map for the North American, European, and Other regions, the best-selling genre is the Action genre. But for the Japanese region, the best-selling genre is the Role-Playing genre. 
+
+Another thing I noticed is that the Strategy genre seems to be the genre with the least sales for all the regions. So if you were a publisher looking into making a video game and were located in North America the Action genre would be a very safe bet in terms of making a profit, while there would be some risks in making a game in the Strategy genre category.
 
 # Sales Distribution By Genre Using Lineplot
 
 ![alt text](https://i.imgur.com/yCsd9Bi.png)
 
-So this time I created a line plot that displays the sales distribution for all regions according to the genre of the game. From what we can see in this line plot the top three genres are Action, Sports, and Shooter. So no matter the region you choose to publish your game those three genres should take priority in order to get the most sales. Those three are the safest choices to make when deciding the genre of the game. But despite Strategy being the genre with the least sales doesn't mean you shouldn't make any effort to make games in that genre because its sales are still good enough to be in the top 12. But it also makes sense why publishers mainly focus on games that are a part of the top three genres since they are safe bets with a good guarantee of making some good money.
+This visualization shows the global sales distribution by the genre of the game. 
+
+From this visualization, we can see that the top three genres are Action, Sports, and Shooter. So no matter the region you choose to publish your game these three genres are very safe choices to pick that have a high chance of making a profit.
