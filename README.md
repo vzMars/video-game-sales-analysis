@@ -22,9 +22,9 @@ I was able to analyze this dataset to find information related to the video game
 
 Rectangular
 
-Qualitative - Rank, Name, Platform, Year, Genre and Publisher
+Qualitative (categorical) - Rank, Name, Platform, Year, Genre, and Publisher
 
-Quantitative - NA_Sales, EU_Sales, JP_Sales, Other_Sales and Global_Sales
+Quantitative (numerical) - NA_Sales, EU_Sales, JP_Sales, Other_Sales and Global_Sales
 
 ### - The granularity of the data:
 
@@ -42,45 +42,69 @@ The data is from 1980-2016 (There are only 3 items in the year 2017 so these wil
 
 This dataset was last updated in 2016 so there won't be any way to see how the trends have changed since the creation of this dataset. Some rows are missing data in the Year and Publisher columns and some contain duplicate information. There are also some errors with the years because the max value in the year column is 2020 which is incorrect since there can only be years from 1980-2016.
 
+# A look at the dataset before any cleaning was done
+
+![alt text](https://i.imgur.com/VwHxeXY.png)
+
+![alt text](https://i.imgur.com/PpYsxiE.png)
+
 # Cleaning the data
 
-### 1. Load and check dataframe:
+### 1. Load and check the data frame:
 
-Loaded the data using pd.read_csv and created a dataframe called vgsales. Then I used .describe() and .describe(include = "O") to check for any columns with missing values. I noticed that Year and Publisher were missing values inside of them.
+Loaded the data using pd.read_csv and created a data frame called vgsales. Then I used .describe() and .describe(include = "O") to check for any rows with missing values. I noticed that some rows had their Year and Publisher columns with missing values.
 
 ### 2. Remove NaN Values:
 
-Used .isna() to check and remove NaN values from Year and Publisher columns and created a new dataframe called vgsales2 without those NaN values.
+Used .isna() to check and remove NaN values from Year and Publisher columns and created a new data frame called vgsales2 without those NaN values.
 
-### 3. Remove rows with incorrect years:
+### 3. Remove rows with invalid years:
 
-Removed rows that had years that were greater than 2016 since there weren't enough rows to bother including data after 2016.
+Removed rows that had years after 2016 since there weren't enough rows to bother including data after 2016.
 
 ### 4. Remove duplicates:
 
-Removed games that had two entries with the same Name, Platform, and Year. Besides that, there weren’t any more duplicates.
+Removed rows that had the same name, platform, and year.
 
 ### 5. Check datatypes:
 
 Changed the datatype of Year from float64 to int64.
 
+After cleaning the data we go from 16,598 rows to 16,286 rows.
+
+# A look at a filtered dataset showing only rows with NaN values:
+
+![alt text](https://i.imgur.com/1aJ50dM.png)
+
+# Removing rows of games that were released after 2016:
+
+![alt text](https://i.imgur.com/kHLhd7d.png)
+
 # Single variable distribution plot
 
-![alt text](https://i.imgur.com/s52cuqB.png)
+![alt text](https://i.imgur.com/7C86MNk.png)
 
-From what we can see the platform with the most games is the DS. Which is a handheld platform where the games are probably much cheaper to make compared to other platforms so it would kinda make sense why there are so many games on that platform.
+From the visualization we can see the platform with the most games (with sales greater than 100,000 copies) is the DS and PS2. 
 
-![alt text](https://i.imgur.com/Tc7F4AC.png)
+These are two platforms where games are much cheaper to make and are two platforms that had a much longer lifespan of games being released compared to other platforms.
 
-We can see that Action is the number one genre, the Sports genre is second, and the Misc genre is third. The Misc genre was probably used to combine genres together or maybe for games that didn't have genre when the data scraping was done on the VGChartz website.
+![alt text](https://i.imgur.com/PXqpPCc.png)
 
-![alt text](https://i.imgur.com/5KD490P.png)
+From this visualization, we can see the top genres and how many games belong in that category. 
 
-Electronic Arts is the publisher with the most games tied to them in this dataset. It would be interesting to see how their games are divided up in terms of genre and platform.
+The action genre is number one and has more than 3000 games (with sales greater than 100,000 copies) in the dataset. This may be why so many publishers choose that genre when creating a game because it has proven to be successful in making a profit.
+
+![alt text](https://i.imgur.com/VVWtvwJ.png)
+
+This visualization shows the total amount of games each publisher has made (with sales greater than 100,000 copies). 
+
+Electronic Arts is the publisher with the most games in this dataset and they tend to develop games yearly that are a part of the top 2 genres (action and sports) that have been proven to be successful at making a profit.
 
 ![alt text](https://i.imgur.com/IVeOYyC.png)
 
-It isn't surprising to see that in the 1980s-2000s there weren’t as many games released compared to later years since the industry pretty much just started at that point in time.
+This visualization shows the count of games with sales greater than 100,000 copies over the years.
+
+From this graph, we can see as the gaming industry grew more popular so did the profits. For example, we can see that in the '90s there were fewer than 500 games that sold more than 100,000 copies while in the 2010s there were over 2500 games that sold more than 100,000 copies.
 
 # Multiple variable plots
 
