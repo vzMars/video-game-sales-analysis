@@ -110,11 +110,13 @@ From this graph, we can see as the gaming industry grew more popular so did the 
 
 ![alt text](https://i.imgur.com/OwP3bjN.png)
 
-From what we can see overall North America has the most sales compared to Europe, Japan, and Other regions. But all four seem to have a big increase and then a sudden drop. I wonder what is the cause of this drop in sales.
+This visualization shows sales by region over the years with North America having the most sales when compared to Europe, Japan, and Other regions.
 
 ![alt text](https://i.imgur.com/EwrpkdK.png)
 
-Since we already know that Electronic Arts has published the most games it is surprising to see that it doesn't hold the number one spot of most sales. Maybe their games don't really sell that many copies compared to Nintendo which holds the number one spot.
+This visualization shows the top 16 publishers' sorted by their global sales.
+
+From the previous graph showing the publisher with the most games with sales greater than 100,000 copies we saw that Electronic Arts was number one but in terms of sales Nintendo has 1.7 billion global sales compared to Electronic Arts's 1 billion global sales.
 
 # Model 1: Decision Tree
 
