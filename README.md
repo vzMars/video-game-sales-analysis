@@ -120,25 +120,49 @@ From the previous graph showing the publisher with the most games with sales gre
 
 # Model 1: Decision Tree
 
-The first prediction model I used was the decision tree model with max depths of 3, 10, and 20. I created dummy variables for the genre column. I created an x data frame containing only the year and genre columns. I also created a y data frame containing only the global sales columns. The data was split into training and testing data which was used to get the mean squared error for both training and testing for each max depth.
+The first prediction model that was used was the Decision Tree model with max depths of 3, 10, and 20.
+
+Dummy variables were created for the genre column. The X data frame contains only the year and genre columns. 
+
+The Y data frame contains only the global sales column. The data was split into training and testing sets which was used to get the mean squared error for both training and testing for each max depth.
+
+X data frame:
+![alt text](https://i.imgur.com/nDj1Wfv.png)
+
+Y data frame:
+![alt text](https://i.imgur.com/NiitSMG.png)
+
+The following are the mean-squared errors for each model:  
 
 max_depth = 03  
 MSE test: 0.882705934443137  
-MSE train: 0.07185287613771285
+MSE train: 0.07185287613771285  
+
+For the model of max depth 3 both the testing and training sets perform well since the MSE for both were relatively low.
+
+The model fits the training data well, meaning that it can predict 'global sales' values with smaller errors on average, and while the training set's MSE is higher than the training set's MSE it is still low enough not to suffer from overfitting meaning that the model does well with unseen data.
 
 max_depth = 10  
 MSE test: 0.5633199009670071  
-MSE train: 7.351989767353041e-07
+MSE train: 7.351989767353041e-07  
+
+For the model of max depth 10, the testing set performs really well meaning that it can easily predict 'global sales' values.
+But with the testing set its MSE is really high (meaning that the model suffers from overfitting) which means that the model will perform well on data that it has already been trained on but with unseen data, it does not perform well.
 
 max_depth = 20  
 MSE test: 0.5616361571516266  
-MSE train: 7.7100464418941e-32
+MSE train: 7.7100464418941e-32  
+
+For the model of max depth 20, the testing set performs really well just like the model with a max depth of 10, meaning that it can easily predict 'global sales' values. 
+But like the model of a max depth of 10, the testing set's MSE is really high (meaning that the model suffers from overfitting) which means that the model will perform well on data that it has already been trained on but with unseen data, it does not perform well.
 
 # Model 2: Linear Regression
 
 ![alt text](https://i.imgur.com/N91azEV.png)
 ![alt text](https://i.imgur.com/5VVu5b2.png)
 ![alt text](https://i.imgur.com/xXOztG4.png)
+
+The second prediction model that was used was the Linear Regression model.
 
 The second prediction model that I used was Linear Regression. I used independent variables publisher, year, and genre. The dependent variable was global sales. I also used the scaled version of the publisher column where I chose publishers who met a certain threshold. The model that had the best R-squared value was the 3rd one with a value of 0.084 which is the closest to 1. I also graphed the residuals of all 3 models. I would probably pick the last model since it had the best R-squared value and the p-values seem to be good.
 
