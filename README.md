@@ -164,9 +164,12 @@ But like the model of a max depth of 10, the testing set's MSE is really high (m
 
 The second prediction model that was used was the Linear Regression model.
 
-The second prediction model that I used was Linear Regression. I used independent variables publisher, year, and genre. The dependent variable was global sales. I also used the scaled version of the publisher column where I chose publishers who met a certain threshold. The model that had the best R-squared value was the 3rd one with a value of 0.084 which is the closest to 1. I also graphed the residuals of all 3 models. I would probably pick the last model since it had the best R-squared value and the p-values seem to be good.
+The independent variables for the three models were the publisher, year, and genre columns.  
+The dependent variable was the global sales column.   
 
-I would probably use the linear regression model over the decision tree model since we seem to get more information from that model when it comes to the global sales of video games.
+The model with the genre independent variable had a R-squared value of 0.012.  
+The model with the year independent variable had a R-squared value of 0.006.   
+The model with the publisher independent (which is a scaled version of the publisher column that only contains publishers who had more than 200 games in the dataset) variable had a R-squared value of 0.084 which of the 3 models was the closest to 1.
 
 # Sales Distribution By Region and Genre Using Heatmap
 
